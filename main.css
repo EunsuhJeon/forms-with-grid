@@ -19,7 +19,7 @@ input[type='submit']{
 .background{
     width: 100%;
     height: 100%;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
 }
@@ -32,12 +32,15 @@ input[type='submit']{
 .contact-team-wrapper{
     width: 500px;
     height: 400px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 5fr;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     background-color: #162AE3;
     color: #ffffff;
+    padding: 50px;
 }
 
 .contact-team-wrapper p{
@@ -47,7 +50,6 @@ input[type='submit']{
 }
 
 #contact-team{
-    /* display: grid; */
     grid-template-rows: 40px 40px 20px 40px;
     grid-template-columns: 190px 190px;
     gap: 10px;
@@ -81,9 +83,9 @@ input[type='submit']{
     background-color: #F2EDE6;
     width: 960px;
     height: 540px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
     align-items: center;
     padding: 70px;
     gap: 10px;
@@ -100,16 +102,17 @@ input[type='submit']{
 }
 
 .content-box{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: [start] 3fr [middle] 1fr [end];
+    grid-template-rows: repeat(2, auto)
 }
 
 .content-box h1{
-    flex-basis: 100%;
     font-family: "Playfair Display", serif;
     font-weight: 100;
     font-size: 57px;
     margin-bottom: 30px;
+    grid-column: start / end;
 }
 
 .content-box form,
@@ -143,9 +146,7 @@ input[type='submit']{
 }
 
 .contact-info{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    display: grid;
     gap: 30px;
     text-align: right;
 }
@@ -161,9 +162,9 @@ input[type='submit']{
 }
 
 .icons{
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    gap: 24px;
     margin-top: auto;
 }
 
@@ -223,27 +224,18 @@ input[type='submit']{
 }
 
 #book-app-box form > div{
-    display: flex;
-    flex-direction: column;
+    display: grid;
     width: 100%;
     height: 100%;
-}
-
-#book-app-box form label{
-    height: 30px;
+    grid-template-rows: 30px 1fr;
 }
 
 #book-app-box form input,
 #book-app-box form select{
-    flex: 1;
     border: none;
     background-color: #F6F9FF;
     border-radius: 7px;
     padding: 0 15px;
-}
-
-#b-number{
-    flex: 1;
 }
 
 #b-number select,
@@ -261,17 +253,16 @@ input[type='submit']{
     border-radius: 0 7px 7px 0;
 }
 
-.button{
-    align-items: flex-end;
-    justify-content: flex-end;
+#book-app-box .button{
+    grid-template-rows: 0.6fr;
 }
 
 #book-app-box .button input{
     width: 50%;
-    flex: 0.5;
     background-color: #3B82F6;
     color: #ffffff;
     font-size: 18px;
+    justify-self: end;
 }
 
 /* Mockup4 */
@@ -336,8 +327,8 @@ input[type='submit']{
 }
 
 #job-app-box form > div{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 32px auto;
     width: 100%;
     height: 100%;
 }
@@ -351,23 +342,23 @@ input[type='submit']{
 }
 
 #job-app-box form label{
-    height: 32px;
     line-height: 32px;
     font-size: 15px;
     font-weight: 100;
 }
 
-#job-app-box form input,
-#job-app-box form select{
-    flex: 1;
+#job-app-box .button{
+    grid-template-rows: 60px;
+    grid-template-columns: auto;
 }
 
 #job-app-box .button input{
     width: 70%;
     height: 80%;
-    flex: none;
     background-color: #1B52DF;
     color: #ffffff;
     font-size: 21px;
     font-weight: 300;
+    justify-self: end;
+    align-self: end;
 }
