@@ -98,7 +98,6 @@ form{
 }
 
 .content-box form{
-    /* display: grid; */
     grid-auto-flow: row;
     grid-auto-rows: 60px;
     gap: 10px;
@@ -242,4 +241,82 @@ form{
 .button input{
     width: 50%;
     flex: 0.5 !important;
+}
+
+/* Mockup4 */
+.job-app-wrapper{
+    background-color: #F5F5F5;
+}
+
+#job-app-box{
+    width: 800px;
+    height: 590px;
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+#job-app-box h1{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+#job-app-box form{
+    grid-template-columns: [start] 350px [middle] 350px [end];
+    grid-template-rows: repeat(7, 1fr); /* 4행을 동일 비율로 나눔 */
+    height: 480px;
+    gap: 10px;
+    grid-template-areas: 
+    "first-name last-name"
+    "email role"
+    "address address"
+    "address address"
+    "city pincode"
+    "date file"
+    ". button"
+    ;
+}
+
+.first-name{
+    grid-area: first-name;
+}
+.last-name{
+    grid-area: last-name;
+}
+.role{
+    grid-area: role;
+}
+.address{
+    grid-area: address;
+}
+.city{
+    grid-area: city;
+}
+.pincode{
+    grid-area: pincode;
+}
+.date{
+    grid-area: date;
+}
+.file{
+    grid-area: file;
+}
+
+#job-app-box form > div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#job-app-box form label{
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+#job-app-box form input,
+#job-app-box form select{
+    flex: 1;
 }
