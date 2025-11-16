@@ -12,6 +12,10 @@ form{
     display: grid;
 }
 
+input[type='submit']{
+    cursor: pointer;
+}
+
 .background{
     width: 100%;
     height: 100%;
@@ -275,7 +279,7 @@ form{
 }
 
 #job-app-box form{
-    grid-template-columns: [start] 350px [middle] 350px [end];
+    grid-template-columns: 350px 350px;
     grid-template-rows: repeat(7, 1fr); /* 4행을 동일 비율로 나눔 */
     height: 480px;
     gap: 10px;
