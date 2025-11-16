@@ -161,6 +161,8 @@ form{
     width: 886px;
     height: 598px;
     padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 .name{
@@ -214,6 +216,10 @@ form{
 #book-app-box form input,
 #book-app-box form select{
     flex: 1;
+    border: none;
+    background-color: #F6F9FF;
+    border-radius: 7px;
+    padding: 0 15px;
 }
 
 #b-number{
@@ -225,12 +231,14 @@ form{
     height: 100%;
 }
 
-#b-number select{
+#book-app-box form #b-number select{
     width: 20%;
+    border-radius: 7px 0 0 7px;
 }
 
-#b-number input{
+#book-app-box form #b-number input{
     width: 80%;
+    border-radius: 0 7px 7px 0;
 }
 
 .button{
@@ -241,6 +249,9 @@ form{
 #book-app-box .button input{
     width: 50%;
     flex: 0.5;
+    background-color: #3B82F6;
+    color: #ffffff;
+    font-size: 18px;
 }
 
 /* Mockup4 */
