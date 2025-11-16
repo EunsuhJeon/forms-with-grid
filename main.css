@@ -238,9 +238,9 @@ form{
     justify-content: flex-end;
 }
 
-.button input{
+#book-app-box .button input{
     width: 50%;
-    flex: 0.5 !important;
+    flex: 0.5;
 }
 
 /* Mockup4 */
@@ -253,6 +253,8 @@ form{
     height: 590px;
     background-color: #ffffff;
     padding: 30px;
+    border: 1px solid #EDDEDE;
+    border-radius: 20px;
 }
 
 #job-app-box h1{
@@ -309,9 +311,17 @@ form{
     height: 100%;
 }
 
+#job-app-box form > div input,
+#job-app-box form > div select{
+    width: 100%;
+    border: 1px solid #D2D2D2;
+    border-radius: 5px;
+    padding: 2px 15px;
+}
+
 #job-app-box form label{
-    height: 35px;
-    line-height: 35px;
+    height: 32px;
+    line-height: 32px;
     font-size: 15px;
     font-weight: 100;
 }
@@ -319,4 +329,14 @@ form{
 #job-app-box form input,
 #job-app-box form select{
     flex: 1;
+}
+
+#job-app-box .button input{
+    width: 70%;
+    height: 80%;
+    flex: none;
+    background-color: #1B52DF;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 300;
 }
