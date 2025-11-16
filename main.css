@@ -88,6 +88,7 @@ input[type='submit']{
     padding: 70px;
     gap: 10px;
     color: #00054B;
+    border-radius: 10px;
 }
 
 #contact-us-box > img{
@@ -95,6 +96,7 @@ input[type='submit']{
     height: 420px;
     object-fit: cover;
     margin-right: 60px;
+    border-radius: 0 50px 0 50px;
 }
 
 .content-box{
