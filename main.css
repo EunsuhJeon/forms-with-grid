@@ -8,6 +8,10 @@ main{
     height: 100vh;
 }
 
+form{
+    display: grid;
+}
+
 .background{
     width: 100%;
     height: 100%;
@@ -39,7 +43,7 @@ main{
 }
 
 #contact-team{
-    display: grid;
+    /* display: grid; */
     grid-template-rows: 40px 40px 20px 40px;
     grid-template-columns: 190px 190px;
     gap: 10px;
@@ -94,7 +98,7 @@ main{
 }
 
 .content-box form{
-    display: grid;
+    /* display: grid; */
     grid-auto-flow: row;
     grid-auto-rows: 60px;
     gap: 10px;
@@ -146,4 +150,96 @@ main{
 
 .icons img{
     width: 20px;
+}
+
+/* Mockup3 */
+.book-app-wrapper{
+    background-color: rgb(224, 224, 224);
+}
+
+#book-app-box{
+    background-color: #ffffff;
+    width: 886px;
+    height: 598px;
+    padding: 50px;
+}
+
+.name{
+    grid-area: name;
+}
+
+.date{
+    grid-area: date;
+}
+
+.email{
+    grid-area: email;
+}
+
+.message{
+    grid-area: message;
+}
+
+.number{
+    grid-area: number;
+}
+
+.button{
+    grid-area: button;
+}
+
+#book-app-box form{
+    padding-top: 50px;
+    grid-template-areas: 
+    "name date"
+    "email message"
+    "number message"
+    ". button"
+    ;
+    grid-template-columns: 380px 380px;
+    grid-template-rows: 80px 80px 80px 80px;
+    gap: 20px;
+}
+
+#book-app-box form > div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#book-app-box form label{
+    height: 30px;
+}
+
+#book-app-box form input,
+#book-app-box form select{
+    flex: 1;
+}
+
+#b-number{
+    flex: 1;
+}
+
+#b-number select,
+#b-number input{
+    height: 100%;
+}
+
+#b-number select{
+    width: 20%;
+}
+
+#b-number input{
+    width: 80%;
+}
+
+.button{
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.button input{
+    width: 50%;
+    flex: 0.5 !important;
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main style="font-family: 'Montserrat', sans-serif;">
+        <div class="background book-app-wrapper">
+            <div id="book-app-box">
+                <h1>Book your appointment now</h1>
+                <p>So our team can reach out to you on time</p>
+                <form>
+                    <div class="name">
+                        <label for="b-name">Full Name</label><input id="b-name" type="text">
+                    </div>
+                    <div class="date">
+                        <label for="b-date">Available Date</label>
+                        <select id="b-date"><option value="Select" selected>Select</option></select>
+                    </div>
+                    <div class="email">
+                        <label for="b-email">Email</label><input id="b-email" type="text">
+                    </div>
+                    <div class="message">
+                        <label for="b-message">Share Your Message</label><input id="b-message" type="text">
+                    </div>
+                    <div class="number">
+                        <label for="b-number">Phone Number</label>
+                        <div id="b-number">
+                            <select name=""><option value="local" selected>+971</option></select><input type="text">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="button" value="Book now &rarr;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
